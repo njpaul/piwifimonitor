@@ -1,0 +1,48 @@
+#!/bin/sh
+# The config file is just a shell script that is sourced into the monitor
+# script. Options that are commented out here are the default values that are
+# used if the option is not specified.
+#
+# These default values work for the Raspberry Pi Zero W when the project
+# is built as described in the documentation.
+
+# Name of the GPIO chip that is used to control the GPIOs
+GPIO_CHIP_NAME=gpiochip0
+
+# The GPIO pin number to use for the relay controlling the modem
+MODEM_GPIO_OFFSET=17
+
+# The GPIO pin number to use for the relay controlling the router
+ROUTER_GPIO_OFFSET=27
+
+# Are the modem and router GPIOs active high (0, false) or active
+# low (non-zero, true).
+# Any non-zero positive integer can be used here...so use 1.
+#MODEM_GPIO_ACTIVE_LOW=0
+#ROUTER_GPIO_ACTIVE_LOW=0
+
+# Do the modem and router GPIOs invert the notion of "active" such that
+# that "0" means active and "1" means inactive. These are either
+# non-zero (true) or 0 (false)
+#MODEM_GPIO_INVERTED=0
+#ROUTER_GPIO_INVERTED=0
+
+# Number of seconds to delay after powering on the modem and before
+# powering on the router
+#ROUTER_POWER_ON_DELAY=60
+
+# Number of seconds to wait after powering off both the modem and the router
+# before powering on the modem
+#POWER_OFF_DELAY=10
+
+# A whitespace-separated list of addresses to ping when determining if the
+# Wi-Fi is down. Ping the Google, Level3, and OpenDNS servers by default.
+# Wi-Fi is considered to be available as long as any one of these respond.
+#PING_ADDRESSES=8.8.8.8 4.2.2.1 208.67.222.222
+
+# Number of seconds to wait for Wi-Fi to become available after powering on
+# before determining that Wi-Fi is either available or not available.
+#POWER_ON_WIFI_TIMEOUT=60
+
+# Number of seconds to wait between tests of the Wi-Fi connection
+#WIFI_MONITOR_INTERVAL=60
