@@ -2,6 +2,7 @@
 set -o nounset
 
 CONFIG_PATH=/etc/piwifimonitor_config
+LOG_PATH=/var/log/piwifimonitor
 
 # gpioset runs in the background. Make sure those processes die if we exit so
 # that we have a clean exit.
@@ -27,7 +28,7 @@ read_args() {
 }
 
 log() {
-    echo "[$(date +"%F %T")] $1"
+    echo "[$(date +"%F %T")] $1" | tee -a "$LOG_PATH"
 }
 
 log_error() {

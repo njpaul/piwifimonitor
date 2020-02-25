@@ -48,11 +48,13 @@ Documentation is a work in progress. It will be in a separate directory as
 a series of guides for the build.
 
 ## Roadmap
-- Push the docker image to Docker Hub
+- Roll over log file
+- Push events to other processes via message queue
 - Document the build process of both the outlet and the software
+- Push the docker image to Docker Hub
 - Setup as WAP to allow SSH into WAP (for maintenance), but not through router
 - Web server on WAP for monitoring
-- More advanced diagnostics, like checking carrier status or DNS resolution
+- More advanced diagnostics, like checking latency, carrier status, and DNS resolution
 - Hot-reload of configs
 - Convert to POSIX shell script...maybe
 - Make native package
